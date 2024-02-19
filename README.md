@@ -1,8 +1,8 @@
 # React + TypeScript + Vite
 
-In the project directory, you can run:
+In the project directory, before running the app locally:
 
-- Replace `env` file and set the file contents to `REACT_APP_API_KEY = Your API KEY or 4f304d45f3b62616958643460868fcac`
+- Add `env` file in the root directory  and set the file contents to `REACT_APP_API_KEY = 'Your API KEY'`
 
 ### `npm run dev`
 
