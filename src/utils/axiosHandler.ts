@@ -14,7 +14,6 @@ axios.interceptors.request.use(
   
   // Response interceptors for API calls
   axios.interceptors.response.use((response) => response, (error) => {
-    console.log(error)
     if (error.response.status === 404) {
         window.alert("Invalid City");
     } else if (error.response.status === 401) {
