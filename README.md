@@ -4,6 +4,10 @@ In the project directory, before running the app locally:
 
 - Add `env` file in the root directory  and set the file contents to `REACT_APP_API_KEY = 'Your API KEY'`
 
+## Available Scripts
+
+In the project directory, you can run:
+
 ### `npm run dev`
 
 For running the app locally
