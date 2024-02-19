@@ -2,7 +2,7 @@
 
 In the project directory, before running the app locally:
 
-- Add `env` file in the root directory  and set the file contents to `REACT_APP_API_KEY = 'Your API KEY'`
+- Add `env` file in the root directory  and set the file contents to `REACT_APP_API_KEY = Your API KEY`
 
 ## Available Scripts
 
