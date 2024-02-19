@@ -1,5 +1,19 @@
 # React + TypeScript + Vite
 
+In the project directory, you can run:
+
+- Replace `env` file and set the file contents to `REACT_APP_API_KEY = Your API KEY or 4f304d45f3b62616958643460868fcac`
+
+### `npm run dev`
+
+For running the app locally
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
