@@ -14,7 +14,7 @@ const SearchEngine = () => {
    // redux state
    const cityName = useSelector((state: any) => state.name.cityName);
 
-  function handleSubmit(event: any) {
+  function handleSubmit(event: { preventDefault: () => void; }) {
     event.preventDefault();
     weatherData(city)
       .then((data) => {
@@ -30,7 +30,7 @@ const SearchEngine = () => {
       });
   }
 
-  function cityUpdate(event: any) {
+  function cityUpdate(event: React.ChangeEvent<HTMLInputElement>) {
     setCity(event.target.value);
   }
 
@@ -41,7 +41,6 @@ const SearchEngine = () => {
           onChange={cityUpdate}
           type="search"
           placeholder="Type a city"
-          role="textbox"
           name="city"
           aria-label="search-input"
         />
