@@ -3,7 +3,7 @@ import SearchEngine from "./SearchEngine";
 import "@testing-library/jest-dom";
 import { vi } from "vitest";
 import { Provider } from "react-redux";
-import store from "../../store";
+import store from "../store";
 
 describe("Search component", () => {
   test("render component", () => {

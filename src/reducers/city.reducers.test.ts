@@ -1,5 +1,5 @@
 import * as CityNameReducerAction from "./city.reducers";
-import store from "../../store.ts";
+import store from "../store.ts";
 
 describe("Name Reducer", () => {
   it("sets selected name", async () => {

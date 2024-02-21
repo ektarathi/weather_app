@@ -3,7 +3,7 @@ import App from "./App";
 import "@testing-library/jest-dom";
 
 import { Provider } from "react-redux";
-import store from "../store";
+import store from "./store";
 
 describe("App component", () => {
   test("render component", () => {

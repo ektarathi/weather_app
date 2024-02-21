@@ -3,7 +3,7 @@ import storage from "redux-persist/lib/storage";
 import { persistReducer } from "redux-persist";
 
 //reducers
-import citySelection from "./src/reducers/city.reducers";
+import citySelection from "./reducers/city.reducers";
 
 const persistConfig = {
   key: "root",
