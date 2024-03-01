@@ -6,13 +6,19 @@ import { useDispatch, useSelector } from "react-redux";
 //reducers
 import { setCityName } from "../reducers/city.reducers";
 
+type RootState = {
+  name: {
+    cityName: string
+  }
+}
+
 const SearchEngine = () => {
   const dispatch = useDispatch();
-  const [city, setCity] = useState(null as any);
+  const [city, setCity] = useState("");
   const [weather, setWeather] = useState(undefined as any);
 
    // redux state
-   const cityName = useSelector((state: any) => state.name.cityName);
+   const cityName = useSelector((state: RootState) => state.name.cityName);
 
   function handleSubmit(event: { preventDefault: () => void; }) {
     event.preventDefault();
