@@ -42,3 +42,7 @@ export const ListInput = styled.ul`
     list-style-type: none;
   }
 `
+
+export const StyledHeading = styled.h4`
+  font-weight: normal
+`

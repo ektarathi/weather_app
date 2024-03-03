@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { weatherData } from "../services/weatherData";
-import { StyledButton, StyledForm, StyledInput, ListInput } from "./search.styled";
+import { StyledButton, StyledForm, StyledInput, ListInput, StyledHeading } from "./search.styled";
 import { useDispatch, useSelector } from "react-redux";
 
 //reducers
@@ -42,6 +42,7 @@ const SearchEngine = () => {
 
   return (
     <>
+    <StyledHeading> Enter location: </StyledHeading>
       <StyledForm aria-label="search-form">
         <StyledInput
           onChange={cityUpdate}

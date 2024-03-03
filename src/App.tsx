@@ -10,7 +10,7 @@ const Styledheading = styled.h1`
 function App() {
   return (
     <div aria-label="landing-page" className="container">
-      <Styledheading>Weather App </Styledheading>
+      <Styledheading>React Weather App </Styledheading>
       <SearchEngine />
     </div>
   );
