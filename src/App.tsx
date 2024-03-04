@@ -5,6 +5,7 @@ import styled from "styled-components";
 const Styledheading = styled.h1`
   font-size: 3em;
   line-height: 1.1;
+  color: white
 `;
 
 function App() {

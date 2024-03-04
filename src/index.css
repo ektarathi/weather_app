@@ -24,7 +24,11 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  background: linear-gradient(-35deg, #000428 0%, #004e92);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 100vh;
 }
 
 @media (prefers-color-scheme: light) {

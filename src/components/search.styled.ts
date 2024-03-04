@@ -21,12 +21,12 @@ export const StyledButton = styled.button`
     outline: 4px auto -webkit-focus-ring-color;
   }
 `;
+
 export const StyledForm = styled.form`
-  background-color: #f4f4f4;
   padding: 20px;
   border-radius: 5px;
-  display: flex;
   flex-direction: row;
+  padding-top: 0
 `
 export const StyledInput = styled.input`
   width: 100%;
@@ -44,5 +44,15 @@ export const ListInput = styled.ul`
 `
 
 export const StyledHeading = styled.h4`
-  font-weight: normal
+  font-weight: normal;
+  color: white;
+  margin-bottom: 0;
 `
+
+export const StyledWrapper = styled.div`
+  box-shadow: rgba(200, 200, 200, 0.3) 0px 1px 2px 0px, rgba(200, 200, 200, 0.15) 0px 1px 3px 1px;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+`
+
