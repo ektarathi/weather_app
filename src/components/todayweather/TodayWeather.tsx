@@ -10,6 +10,8 @@ import {
 import { useSelector } from "react-redux";
 import AirConditions from "./airConditions/AirConditions";
 
+import { format } from 'date-fns'
+
 type RootState = {
   name: {
     cityName: string;
@@ -31,7 +33,7 @@ const TodayWeather: React.FC<TodayWeatherProps> = ({ todayWeather }) => {
         <WeatherDetailsSection>
           <WeatherDetails>
             <InfoTextTitle>{cityName}</InfoTextTitle>
-            <InfoText>{Date.now()}</InfoText>
+            <InfoText>{`Today ${format(Date.now(), "MMM d")}`}</InfoText>
           </WeatherDetails>
           <WeatherDetails>
             <InfoTextTitle>{Math.round(todayWeather.main.temp)} °C</InfoTextTitle>

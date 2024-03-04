@@ -4,7 +4,6 @@ import {
   StyledButton,
   StyledForm,
   StyledInput,
-  ListInput,
   StyledHeading,
   StyledWrapper,
 } from "./search.styled";
@@ -14,7 +13,6 @@ import { useDispatch } from "react-redux";
 import { setCityName } from "../reducers/city.reducers";
 
 // components
-import DayForecast from "./weatherForecast/DayForecast";
 import TodayWeather from "./todayweather/TodayWeather";
 
 const SearchEngine = () => {
