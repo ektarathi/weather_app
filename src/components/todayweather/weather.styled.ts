@@ -42,4 +42,5 @@ export const HeadingText = styled.h4`
   font-weight: bold;
   margin-top: 20px;
   font-size: 20px;
+  margin-bottom: 0
 `;
