@@ -15,6 +15,19 @@ describe("Search component", () => {
     expect(screen.getByLabelText("search-form")).toBeInTheDocument();
   });
 
+  test("render headings", () => {
+    render(
+      <Provider store={store}>
+        <SearchEngine />
+      </Provider>
+    );
+
+    expect(screen.getByRole("heading", { level: 4 })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { level: 4 })).toHaveTextContent(
+      "Enter location:"
+    );
+  });
+
   test("should render basic form fields", async () => {
     render(
       <Provider store={store}>

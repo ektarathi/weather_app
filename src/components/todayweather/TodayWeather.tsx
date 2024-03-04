@@ -25,19 +25,19 @@ interface TodayWeatherProps {
 const TodayWeather: React.FC<TodayWeatherProps> = ({ todayWeather }) => {
   // redux state
   const cityName = useSelector((state: RootState) => state.name.cityName);
-
+  
   return (
     <>
-      <WeatherInfo>
+      <WeatherInfo aria-label="current-weather">
         <HeadingText>CURRENT WEATHER</HeadingText>
         <WeatherDetailsSection>
           <WeatherDetails>
-            <InfoTextTitle>{cityName}</InfoTextTitle>
-            <InfoText>{`Today ${format(Date.now(), "MMM d")}`}</InfoText>
+            <InfoTextTitle aria-label="current-weather-name">{cityName}</InfoTextTitle>
+            <InfoText aria-label="current-weather-value">{`Today ${format(Date.now(), "MMM d")}`}</InfoText>
           </WeatherDetails>
           <WeatherDetails>
-            <InfoTextTitle>{Math.round(todayWeather.main.temp)} °C</InfoTextTitle>
-            <InfoText>{todayWeather.weather[0].description}</InfoText>
+            <InfoTextTitle aria-label="current-weather-name">{Math.round(todayWeather.main.temp)} °C</InfoTextTitle>
+            <InfoText aria-label="current-weather-value">{todayWeather.weather[0].description}</InfoText>
           </WeatherDetails>
           <WeatherDetails>
             <img

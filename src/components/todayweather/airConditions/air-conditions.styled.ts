@@ -7,7 +7,7 @@ export const AirConditionsSection = styled.div`
   margin-bottom: 30px;
 `
 
-export const HeadingText = styled.div`
+export const HeadingText = styled.h4`
  color: rgba(255, 255, 255, 0.7);
  text-align: center;
  font-weight: bold;

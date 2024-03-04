@@ -40,7 +40,6 @@ const SearchEngine = () => {
     setCity(event.target.value);
   }
 
-  console.log(todayWeather);
   return (
     <>
       <StyledHeading> Enter location: </StyledHeading>

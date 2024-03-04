@@ -36,7 +36,7 @@ export const WeatherDetailsSection = styled.div`
   justify-content: space-around;
 `;
 
-export const HeadingText = styled.div`
+export const HeadingText = styled.h4`
   color: rgba(255, 255, 255, 0.7);
   text-align: center;
   font-weight: bold;
