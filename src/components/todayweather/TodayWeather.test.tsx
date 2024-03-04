@@ -56,7 +56,7 @@ describe("Today weather component", () => {
     expect(screen.getAllByLabelText("current-weather-value")[0]).toHaveTextContent(`Today ${date}`)
   });
 
-  test(" render image", () => {
+  test("render image", () => {
     render(
         <Provider store={store}>
           <TodayWeather todayWeather={data} />
@@ -65,6 +65,5 @@ describe("Today weather component", () => {
 
     expect(screen.getByAltText("weather icon")).toBeInTheDocument();
     expect(screen.getByRole("img")).toBeInTheDocument();
-
   })
 });
