@@ -20,15 +20,6 @@ interface DayForecastProps {
   lon: number;
 }
 
-type resultProps = {
-  id: number;
-  merchant: string;
-  description: string;
-  status: string;
-  category: string;
-  date: Date;
-  amount: number;
-};
 
 const DayForecast: React.FC<DayForecastProps> = ({ lat, lon }) => {
   const [weatherForecast, setWeatherForecast] = useState(undefined as any);
@@ -53,7 +44,7 @@ const DayForecast: React.FC<DayForecastProps> = ({ lat, lon }) => {
           <HeadingText>DAILY FORECAST</HeadingText>
           {weatherForecast.daily.map((item: any, index: number) => {
             return (
-              <WeatherDetailsSection>
+              <WeatherDetailsSection key={index}>
                 <DailyForecastInfo>
                   <ForecastDay>
                     {format(new Date(item.dt), "EEEE, dd HH:mm:ss")}
