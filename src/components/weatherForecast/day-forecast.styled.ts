@@ -1,11 +1,19 @@
 import styled from "styled-components";
 
 export const WeatherInfo = styled.div`
-  width: 50%;
-  color: white;
-  padding: 5px;
+  width: 100%;
   height: 500px;
-  overflow: scroll;
+    overflow: scroll;
+`;
+
+export const DailyForecast = styled.div`
+width: 50%;
+color: white;
+padding: 5px;
+
+@media (max-width: 1200px) {
+  width: 100%;
+}
 `;
 
 export const HeadingText = styled.h4`
@@ -33,7 +41,7 @@ export const WeatherDetailsSection = styled.div`
   flex-direction: row;
   color: white;
   justify-content: space-around;
-  margin-bottom: 1.5rem;
+  margin-bottom: .8rem;
 `;
 
 export const DailyForecastInfo = styled.div`
@@ -50,7 +58,8 @@ export const ForecastDay = styled.div`
 
 export const ForecastDescription = styled.div`
   color: rgba(255, 255, 255, 0.7);
-  margin-top: 10px;
+  margin-top: 5px;
+  font-size: 14px;
 `;
 
 export const ForecastDetails = styled.p`

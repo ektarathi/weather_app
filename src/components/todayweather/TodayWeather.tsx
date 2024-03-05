@@ -23,6 +23,7 @@ interface TodayWeatherProps {
 }
 
 const TodayWeather: React.FC<TodayWeatherProps> = ({ todayWeather }) => {
+    
   // redux state
   const cityName = useSelector((state: RootState) => state.name.cityName);
   

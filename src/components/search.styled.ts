@@ -35,13 +35,6 @@ export const StyledInput = styled.input`
   border-radius: 5px;
   width: 250px;
 `
-export const ListInput = styled.ul`
-  padding: 0;
-
-  li {
-    list-style-type: none;
-  }
-`
 
 export const StyledHeading = styled.h4`
   font-weight: normal;
@@ -54,5 +47,10 @@ export const StyledWrapper = styled.div`
   border-radius: 1rem;
   display: flex;
   flex-direction: row;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
+
 `
 

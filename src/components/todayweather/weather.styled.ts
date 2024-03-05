@@ -4,6 +4,10 @@ export const WeatherInfo = styled.div`
   width: 50%;
   color: white;
   padding: 5px;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
 `;
 
 export const WeatherForecast = styled.div`

@@ -11,6 +11,7 @@ import {
   DailyForecastInfo,
   ForecastDay,
   ForecastDescription,
+  DailyForecast,
 } from "./day-forecast.styled";
 
 import ForecastItem from "./ForecastItem";
@@ -19,7 +20,6 @@ interface DayForecastProps {
   lat: number;
   lon: number;
 }
-
 
 const DayForecast: React.FC<DayForecastProps> = ({ lat, lon }) => {
   const [weatherForecast, setWeatherForecast] = useState(undefined as any);
@@ -40,34 +40,42 @@ const DayForecast: React.FC<DayForecastProps> = ({ lat, lon }) => {
   return (
     <>
       {weatherForecast !== undefined ? (
-        <WeatherInfo aria-label="day-weather-forecast">
+        <DailyForecast>
           <HeadingText>DAILY FORECAST</HeadingText>
-          {weatherForecast.daily.map((item: any, index: number) => {
-            return (
-              <WeatherDetailsSection key={index}>
-                <DailyForecastInfo>
-                  <ForecastDay>
-                    {format(new Date(item.dt), "EEEE, dd HH:mm:ss")}
-                  </ForecastDay>
-                  <ForecastDescription>
-                    {item.weather[0].description}
-                  </ForecastDescription>
-                </DailyForecastInfo>
-                <DailyForecastInfo>
-                  <ForecastItem
-                    type="temperature"
-                    value={`${Math.round(item.feels_like.day)} °C`}
-                  />
-                  <ForecastItem type="clouds" value={`${item.clouds} %`} />
-                </DailyForecastInfo>
-                <DailyForecastInfo>
-                  <ForecastItem type="wind" value={`${item.wind_speed} m/s`} />
-                  <ForecastItem type="humidity" value={`${item.humidity} %`} />
-                </DailyForecastInfo>
-              </WeatherDetailsSection>
-            );
-          })}
-        </WeatherInfo>
+          <WeatherInfo aria-label="day-weather-forecast">
+            {weatherForecast.daily.map((item: any, index: number) => {
+              return (
+                <WeatherDetailsSection key={index}>
+                  <DailyForecastInfo>
+                    <ForecastDay>
+                      {format(new Date(item.dt), "EEEE, dd HH:mm:ss")}
+                    </ForecastDay>
+                    <ForecastDescription>
+                      {item.weather[0].description}
+                    </ForecastDescription>
+                  </DailyForecastInfo>
+                  <DailyForecastInfo>
+                    <ForecastItem
+                      type="temperature"
+                      value={`${Math.round(item.feels_like.day)} °C`}
+                    />
+                    <ForecastItem type="clouds" value={`${item.clouds} %`} />
+                  </DailyForecastInfo>
+                  <DailyForecastInfo>
+                    <ForecastItem
+                      type="wind"
+                      value={`${item.wind_speed} m/s`}
+                    />
+                    <ForecastItem
+                      type="humidity"
+                      value={`${item.humidity} %`}
+                    />
+                  </DailyForecastInfo>
+                </WeatherDetailsSection>
+              );
+            })}
+          </WeatherInfo>
+        </DailyForecast>
       ) : null}
     </>
   );

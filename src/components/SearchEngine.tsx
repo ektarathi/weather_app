@@ -58,8 +58,11 @@ const SearchEngine = () => {
       </StyledForm>
       {todayWeather !== undefined ? (
         <StyledWrapper>
-           <TodayWeather todayWeather={todayWeather}/>
-           <DayForecast lat={todayWeather.coord.lat} lon={todayWeather.coord.lon} />
+          <TodayWeather todayWeather={todayWeather} />
+          <DayForecast
+            lat={todayWeather.coord.lat}
+            lon={todayWeather.coord.lon}
+          />
         </StyledWrapper>
       ) : null}
     </>
