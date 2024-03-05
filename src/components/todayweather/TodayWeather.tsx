@@ -32,7 +32,7 @@ const TodayWeather: React.FC<TodayWeatherProps> = ({ todayWeather }) => {
         <WeatherDetailsSection>
           <WeatherDetails>
             <InfoTextTitle aria-label="current-weather-name">{cityName}</InfoTextTitle>
-            <InfoText aria-label="current-weather-value">{`Today ${format(Date.now(), "MMM d")}`}</InfoText>
+            <InfoText aria-label="current-weather-value">{`Today ${format(new Date(todayWeather.dt * 1000), "MMM d")}`}</InfoText>
           </WeatherDetails>
           <WeatherDetails>
             <InfoTextTitle aria-label="current-weather-name">{Math.round(todayWeather.main.temp)} °C</InfoTextTitle>

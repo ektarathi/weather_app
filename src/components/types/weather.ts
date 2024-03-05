@@ -1,4 +1,5 @@
 export type DataProps = {
+  dt: number;
   main: {
     feels_like: number;
     humidity: number;
