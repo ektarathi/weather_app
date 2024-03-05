@@ -23,6 +23,7 @@ interface DayForecastProps {
 
 const DayForecast: React.FC<DayForecastProps> = ({ lat, lon }) => {
   const [weatherForecast, setWeatherForecast] = useState(undefined as any);
+
   useEffect(() => {
     FiveDaysWeatherForecast(lat, lon)
       .then((data) => {
@@ -35,7 +36,7 @@ const DayForecast: React.FC<DayForecastProps> = ({ lat, lon }) => {
       .catch(function (error) {
         console.log("error : ", error);
       });
-  }, []);
+  }, [lat, lon]);
 
   return (
     <>
@@ -48,7 +49,7 @@ const DayForecast: React.FC<DayForecastProps> = ({ lat, lon }) => {
                 <WeatherDetailsSection key={index}>
                   <DailyForecastInfo>
                     <ForecastDay>
-                      {format(new Date(item.dt), "EEEE, dd HH:mm:ss")}
+                      {format(new Date(item.dt * 1000), "EEEE, dd HH:mm:ss")}
                     </ForecastDay>
                     <ForecastDescription>
                       {item.weather[0].description}
