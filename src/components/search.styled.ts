@@ -34,12 +34,17 @@ export const StyledInput = styled.input`
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 250px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 1rem;
+  }
 `
 
 export const StyledHeading = styled.h4`
   font-weight: normal;
   color: white;
-  margin-bottom: 0;
+  margin-bottom: .5rem;
+  margin-top: 0;
 `
 
 export const StyledWrapper = styled.div`
