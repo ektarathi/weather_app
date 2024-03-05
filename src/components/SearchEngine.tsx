@@ -13,6 +13,7 @@ import { useDispatch } from "react-redux";
 import { setCityName } from "../reducers/city.reducers";
 
 // components
+import DayForecast from "./weatherForecast/DayForecast";
 import TodayWeather from "./todayweather/TodayWeather";
 
 const SearchEngine = () => {
@@ -58,6 +59,7 @@ const SearchEngine = () => {
       {todayWeather !== undefined ? (
         <StyledWrapper>
            <TodayWeather todayWeather={todayWeather}/>
+           <DayForecast lat={todayWeather.coord.lat} lon={todayWeather.coord.lon} />
         </StyledWrapper>
       ) : null}
     </>

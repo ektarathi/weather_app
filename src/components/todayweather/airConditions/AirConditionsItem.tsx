@@ -6,7 +6,7 @@ import {
   InfoText,
   InfoTitleText
 } from "./air-conditions-items.styled";
-import { CloudIcon, HumidityIcon, TemperatureIcon, WindIcon } from "./icons/icon";
+import { CloudIcon, HumidityIcon, TemperatureIcon, WindIcon } from "../../icons/icon";
 
 interface AirConditionsItemsProps {
   title: string;
