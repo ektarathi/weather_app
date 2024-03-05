@@ -14,9 +14,10 @@ import { format } from 'date-fns'
 
 //types
 import { RootState } from "../types/city";
+import { DataProps } from "../types/weather";
 
 interface TodayWeatherProps {
-  todayWeather: any;
+  todayWeather: DataProps;
 }
 
 const TodayWeather: React.FC<TodayWeatherProps> = ({ todayWeather }) => {

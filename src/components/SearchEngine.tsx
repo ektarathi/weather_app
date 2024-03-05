@@ -17,12 +17,12 @@ import DayForecast from "./weatherForecast/DayForecast";
 import TodayWeather from "./todayweather/TodayWeather";
 
 // types
-import { weatherProps } from "./types/weather";
+import { DataProps } from "./types/weather";
 
 const SearchEngine = () => {
   const dispatch = useDispatch();
   const [city, setCity] = useState("");
-  const [todayWeather, setTodayWeather] = useState<weatherProps>();
+  const [todayWeather, setTodayWeather] = useState<DataProps>();
 
   function handleSubmit(event: { preventDefault: () => void }) {
     event.preventDefault();

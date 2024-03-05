@@ -1,7 +1,8 @@
 export type DataProps = {
   main: {
     feels_like: number;
-    humidity: number
+    humidity: number;
+    temp: number
   };
   wind: {
     speed: string;
@@ -9,11 +10,14 @@ export type DataProps = {
   clouds: {
     all: number
   };
-}
-
-export type weatherProps = {
   coord: {
     lat: number;
     lon: number;
   };
+  weather: WeatherDetails []
+}
+
+export type WeatherDetails = {
+  description: string;
+  icon: string
 }
