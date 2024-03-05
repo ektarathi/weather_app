@@ -16,10 +16,13 @@ import { setCityName } from "../reducers/city.reducers";
 import DayForecast from "./weatherForecast/DayForecast";
 import TodayWeather from "./todayweather/TodayWeather";
 
+// types
+import { weatherProps } from "./types/weather";
+
 const SearchEngine = () => {
   const dispatch = useDispatch();
   const [city, setCity] = useState("");
-  const [todayWeather, setTodayWeather] = useState(undefined as any);
+  const [todayWeather, setTodayWeather] = useState<weatherProps>();
 
   function handleSubmit(event: { preventDefault: () => void }) {
     event.preventDefault();

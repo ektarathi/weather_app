@@ -7,8 +7,11 @@ import {
 // components
 import AirConditionsItems from "./AirConditionsItem";
 
+// types
+import { DataProps } from "../../types/weather";
+
 interface AirConditionsProps {
-  data: any;
+  data: DataProps;
 }
 
 const AirConditions: React.FC<AirConditionsProps> = ({ data }) => {

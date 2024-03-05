@@ -12,18 +12,15 @@ import AirConditions from "./airConditions/AirConditions";
 
 import { format } from 'date-fns'
 
-type RootState = {
-  name: {
-    cityName: string;
-  };
-};
+//types
+import { RootState } from "../types/city";
 
 interface TodayWeatherProps {
   todayWeather: any;
 }
 
 const TodayWeather: React.FC<TodayWeatherProps> = ({ todayWeather }) => {
-    
+
   // redux state
   const cityName = useSelector((state: RootState) => state.name.cityName);
   
